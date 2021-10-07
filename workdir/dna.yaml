@@ -1,0 +1,8 @@
+---
+manifest_version: 1
+name: "signing"
+uuid: 00000000-0000-0000-0000-000000000000
+properties: 
+zomes: 
+  - name: crypto
+    bundled: ../target/wasm32-unknown-unknown/release/crypto_signing.wasm

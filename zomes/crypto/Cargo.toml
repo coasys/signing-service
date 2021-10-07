@@ -1,0 +1,16 @@
+[package]
+name = "crypto_signing"
+version = "0.1.0"
+authors = ["jdeepee <joshuadparkin@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+name = "crypto_signing"
+
+[dependencies]
+serde = "1"
+serde_json = "1"
+
+hdk = "0.0.107"
+holo_hash = "0.0.5"
