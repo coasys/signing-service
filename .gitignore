@@ -1,2 +1,4 @@
 target
 zomes/tests/node_modules
+workdir/signing.dna
+.cargo
