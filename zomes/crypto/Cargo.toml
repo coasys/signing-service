@@ -12,5 +12,5 @@ name = "crypto_signing"
 serde = "1"
 serde_json = "1"
 
-hdk = "0.0.109"
-holo_hash = "0.0.8"
+hdk = "0.0.123"
+holo_hash = "0.0.20"
