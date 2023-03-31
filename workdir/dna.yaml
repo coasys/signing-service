@@ -1,8 +1,16 @@
 ---
 manifest_version: 1
 name: "signing"
-uuid: 00000000-0000-0000-0000-000000000000
-properties: 
-zomes: 
-  - name: crypto
-    bundled: ../target/wasm32-unknown-unknown/release/crypto_signing.wasm
+integrity:
+  network_seed: 00000000-0000-0000-0000-000000000000
+  properties: {}
+  origin_time: 2022-02-11T23:05:19.470323Z
+  zomes:
+    - name: crypto_signing_integrity
+      bundled: ../target/wasm32-unknown-unknown/release/crypto_signing_integrity.wasm
+coordinator:
+  zomes:
+    - name: crypto_signing
+      bundled: ../target/wasm32-unknown-unknown/release/crypto_signing.wasm
+      dependencies:
+        - name: crypto_signing_integrity

@@ -1,6 +1,7 @@
 [workspace]
 members = [
   "zomes/crypto",
+  "zomes/crypto_integrity"
 ]
 
 [profile.dev]

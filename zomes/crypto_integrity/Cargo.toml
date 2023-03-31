@@ -1,0 +1,16 @@
+[package]
+authors = ["josh@junto.foundation"]
+edition = "2018"
+name = "crypto_signing_integrity"
+version = "0.0.1"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+name = "crypto_signing_integrity"
+
+[dependencies]
+derive_more = "0"
+serde = "1"
+
+holo_hash = "0.1.0"
+hdi = "0.2.0"

@@ -1,6 +1,11 @@
-use hdk::prelude::*;
 use hdk::ed25519::sign as internal_sign;
 use hdk::ed25519::verify_signature;
+use hdk::prelude::*;
+
+#[hdk_extern]
+fn init(_: ()) -> ExternResult<InitCallbackResult> {
+    Ok(InitCallbackResult::Pass)
+}
 
 /// Sign something
 #[hdk_extern]
@@ -10,9 +15,9 @@ pub fn sign(data: String) -> ExternResult<Signature> {
 
 #[derive(Serialize, Deserialize, Debug, SerializedBytes)]
 pub struct VerifyInput {
-    pub agent_key: AgentPubKey, 
-    pub signature: Signature, 
-    pub data: String
+    pub agent_key: AgentPubKey,
+    pub signature: Signature,
+    pub data: String,
 }
 
 /// Create an expression and link it to yourself publicly
